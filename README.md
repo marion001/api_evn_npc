@@ -14,6 +14,7 @@ $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
 
 
 Cấu hình trên hass:
+
   - platform: rest  
     name: "evn_info"
     resource: http://192.168.97.17/evn/evn_info.php?makhachhang=PA23VG0053140&matkhau=tuyenvk
