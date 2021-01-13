@@ -12,6 +12,13 @@ $makhachhang = "PA23VG0098765"; // tài khoản/mã khách hàng đăng nhập a
 
 $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
 
+các api lấy dữ liệu ở đây:
+
+      CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang", //API lấy thông tin khách hàng
+    # CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang/usage_capture_schedules",  
+    # CURLOPT_URL => "$host_api/api/v1/customerindex?code=$makhachhang&month=12&year=2020&size=24",
+    # CURLOPT_URL => "$host_api/api/v1/customerinfo", //Username/Mã Khách Hàng
+    # CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang/invoices?per=$thanggannhat", //Tra cứu các tháng gần nhất
 
 Cấu hình trên hass:
 
