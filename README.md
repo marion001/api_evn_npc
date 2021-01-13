@@ -22,31 +22,24 @@ các api lấy dữ liệu ở đây:
 
 Cấu hình trên hass:
 
-  - platform: rest  
-  
-    name: "evn_info"
-    
-    resource: http://192.168.97.17/evn/evn_info.php
-    
-    timeout: 60
-    
-    scan_interval:
-    
+    - platform: rest  
+      name: "evn_info"
+      resource: http://192.168.97.17/evn/evn_info.php
+      timeout: 60
+      scan_interval:
         minutes: 720
-      
-    force_update: true
-    
-    json_attributes:
-      - id
-      - name
-      - address
-      - phone
-      - contract_id
-      - usage_counter_id
-      - ngay_ki
-      - loai_hop_dong
-      - gia_ban_dien
-      - electricity_company
+      force_update: true
+      json_attributes:
+        - id
+        - name
+        - address
+        - phone
+        - contract_id
+        - usage_counter_id
+        - ngay_ki
+        - loai_hop_dong
+        - gia_ban_dien
+        - electricity_company
 
 UI:
 
