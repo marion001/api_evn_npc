@@ -40,3 +40,18 @@ Cấu hình trên hass:
       - loai_hop_dong
       - gia_ban_dien
       - electricity_company
+
+UI:
+
+    type: horizontal-stack
+    cards:
+      - type: markdown
+        content: >
+          <center>Thông Tin Đồng Hồ Điện</center> - Tên Khách Hàng:
+          {{state_attr('sensor.evn_info','name')}}<br> - Mã Khách Hàng:
+          {{state_attr('sensor.evn_info','id')}}<br> - SĐT: {{
+          state_attr('sensor.evn_info','phone')}}<br> - Loại Điện :
+          {{state_attr('sensor.evn_info','loai_hop_dong')}}<br> - Ngày Dùng :
+          {{state_attr('sensor.evn_info','ngay_ki')}}<hr> - Nơi Đăng Ký:
+          {{state_attr('sensor.evn_info','electricity_company').name}}<br> - Địa
+          Chỉ: {{state_attr('sensor.evn_info','electricity_company').address}}
