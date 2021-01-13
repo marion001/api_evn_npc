@@ -24,6 +24,7 @@ Cấu hình trên hass:
     timeout: 60
     
     scan_interval:
+    
       minutes: 720
       
     force_update: true
