@@ -17,11 +17,16 @@ Cấu hình trên hass:
 
   - platform: rest  
     name: "evn_info"
+    
     resource: http://192.168.97.17/evn/evn_info.php?makhachhang=PA23VG0053140&matkhau=tuyenvk
+    
     timeout: 60
+    
     scan_interval:
       minutes: 720
+      
     force_update: true
+    
     json_attributes:
       - id
       - name
