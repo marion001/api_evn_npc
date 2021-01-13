@@ -25,7 +25,7 @@ Cấu hình trên hass:
     
     scan_interval:
     
-      minutes: 720
+        minutes: 720
       
     force_update: true
     
