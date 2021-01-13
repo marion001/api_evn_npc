@@ -2,10 +2,13 @@
 api lấy dữ liệu đồng hồ điện lực miền bắc
 - các bạn tải lên host hoặc cài apache trên server của bạn để chạy file api_evn_npc.php
 - tiếp đến sửa thông tin 2 dòng sau thành thông tin của bạn:
+
 $makhachhang = "MaKhachHang"; // tài khoản/mã khách hàng đăng nhập app của bạn
+
 $matkhau ="MatKhauAPP";  // mật khẩu đăng nhập app của bạn
   - ví dụ:
 $makhachhang = "PA23VG0098765"; // tài khoản/mã khách hàng đăng nhập app của bạn
+
 $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
 
 
