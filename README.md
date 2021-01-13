@@ -7,6 +7,7 @@ $makhachhang = "MaKhachHang"; // tài khoản/mã khách hàng đăng nhập app
 
 $matkhau ="MatKhauAPP";  // mật khẩu đăng nhập app của bạn
   - ví dụ:
+  
 $makhachhang = "PA23VG0098765"; // tài khoản/mã khách hàng đăng nhập app của bạn
 
 $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
