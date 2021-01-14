@@ -13,6 +13,7 @@ $makhachhang = "PA23VG0098765"; // tài khoản/mã khách hàng đăng nhập a
 $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
 
 các api lấy dữ liệu ở đây:
+các bạn dùng api nò thì bỏ dấu # ở đầu api đó đi, và api nào không dùng thì thêm dấu # vào trước api đó nhé
 
       CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang", //API lấy thông tin khách hàng
     # CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang/usage_capture_schedules",  
