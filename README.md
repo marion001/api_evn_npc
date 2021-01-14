@@ -1,6 +1,6 @@
 # api_evn_npc
 api lấy dữ liệu đồng hồ điện lực miền bắc
-- các bạn tải lên host hoặc cài apache trên server của bạn để chạy file api_evn_npc.php
+- các bạn tải lên host hoặc (cài apache và cài php, cài thêm cả các php common extensions trên server của bạn) để chạy file api_evn_npc.php
 - tiếp đến sửa thông tin 2 dòng sau thành thông tin của bạn:
 
 $makhachhang = "MaKhachHang"; // tài khoản/mã khách hàng đăng nhập app của bạn
