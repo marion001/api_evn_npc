@@ -8,7 +8,7 @@ $makhachhang = "MaKhachHang"; // tài khoản/mã khách hàng đăng nhập app
 $matkhau = "MatKhauAPP";  // mật khẩu đăng nhập app của bạn                    ########
 #######################################################################################
 $thanggannhat = "6"; // Tra cứu tiền điện các tháng gần nhất, đặt 6 là 6 tháng gần nhất, đặt 10 là 10 tháng gần nhất
-$host_api = "http://116.212.40.6"; // Hoặc http://appapiauth.cskh.npc.com.vn
+$host_api = "http://appapiauth.cskh.npc.com.vn"; // Hoặc http://116.212.40.6
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => "$host_api/oauth/token?grant_type=password&username=$makhachhang&password=$matkhau",
@@ -36,8 +36,9 @@ if ($loi1) {
   echo "cURL POST L&#7895;i L&#7845;y Token #:" . $loi1;
 } else { //echo $dulieu; 
 }
-$tachchuoi = explode('{"access_token":"', $dulieu);
-$tachchuoi1 = explode('","token_type":"bearer","', $tachchuoi[1]);  
+$character = json_decode($dulieu);
+$tachdulieu = $character->access_token; 
+//echo $tachdulieu;
 $curl1 = curl_init();
 curl_setopt_array($curl1, array(
   CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang", //API lấy thông tin khách hàng
@@ -59,7 +60,7 @@ curl_setopt_array($curl1, array(
   "User-Agent: okhttp/3.8.0",
   "Accept: application/json;charset=UTF-8",
   "Content-Type: application/x-www-form-urlencoded",
-  "Authorization: Bearer $tachchuoi1[0]",
+  "Authorization: Bearer $tachdulieu",
   "X-Channel-Id: android",
   ),
 ));
@@ -69,5 +70,4 @@ curl_close($curl1);
 if ($loi) {
   echo "cURL Get L&#7895;i L&#7845;y Th&#244;ng Tin D&#7919; Li&#7879;u #:" . $loi;
 } else { echo $ketquajson; }
-
 ?>
