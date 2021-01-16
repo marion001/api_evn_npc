@@ -13,7 +13,7 @@ $makhachhang = "PA23VG0098765"; // tài khoản/mã khách hàng đăng nhập a
 $matkhau ="12345678";  // mật khẩu đăng nhập app của bạn
 
 các api lấy dữ liệu ở đây:
-các bạn dùng api nò thì bỏ dấu # ở đầu api đó đi, và api nào không dùng thì thêm dấu # vào trước api đó nhé
+các bạn dùng api nào thì bỏ dấu # ở đầu api đó đi, và api nào không dùng thì thêm dấu # vào trước api đó nhé
 
       CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang", //API lấy thông tin khách hàng
     # CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang/usage_capture_schedules",  
@@ -21,7 +21,7 @@ các bạn dùng api nò thì bỏ dấu # ở đầu api đó đi, và api nào
     # CURLOPT_URL => "$host_api/api/v1/customerinfo", //Username/Mã Khách Hàng
     # CURLOPT_URL => "$host_api/api/mw/customers/$makhachhang/invoices?per=$thanggannhat", //Tra cứu các tháng gần nhất
 
-Cấu hình trên hass:
+Cấu hình trên has demo:
 
     - platform: rest  
       name: "evn_info"
@@ -42,7 +42,7 @@ Cấu hình trên hass:
         - gia_ban_dien
         - electricity_company
 
-UI:
+Demo UI:
 
     type: horizontal-stack
     cards:
