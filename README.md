@@ -30,7 +30,6 @@ Cấu hình trên has demo:
       scan_interval:
         minutes: 720
       force_update: true
-      value_template: '1' // giá trị giả fix 225
       json_attributes:
         - id
         - name
