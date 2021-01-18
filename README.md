@@ -24,8 +24,9 @@ các bạn dùng api nào thì bỏ dấu # ở đầu api đó đi, và api nà
 Cấu hình trên has demo:
 
     - platform: rest  
-      name: "evn_info"
+      name: "EVN Thông Tin"
       resource: http://192.168.97.17/evn/evn_info.php
+      value_template: '{{ value_json.name }}'
       timeout: 60
       scan_interval:
         minutes: 720
@@ -36,11 +37,12 @@ Cấu hình trên has demo:
         - address
         - phone
         - contract_id
+        - electricity_company
         - usage_counter_id
         - ngay_ki
         - loai_hop_dong
         - gia_ban_dien
-        - electricity_company
+        - geoPath
 
 Demo UI:
 
@@ -48,11 +50,13 @@ Demo UI:
     cards:
       - type: markdown
         content: >
-          <center>Thông Tin Đồng Hồ Điện</center> - Tên Khách Hàng:
-          {{state_attr('sensor.evn_info','name')}}<br> - Mã Khách Hàng:
-          {{state_attr('sensor.evn_info','id')}}<br> - SĐT: {{
-          state_attr('sensor.evn_info','phone')}}<br> - Loại Điện :
-          {{state_attr('sensor.evn_info','loai_hop_dong')}}<br> - Ngày Dùng :
-          {{state_attr('sensor.evn_info','ngay_ki')}}<hr> - Nơi Đăng Ký:
-          {{state_attr('sensor.evn_info','electricity_company').name}}<br> - Địa
-          Chỉ: {{state_attr('sensor.evn_info','electricity_company').address}}
+          <center><b>Thông Tin Đồng Hồ Điện</b></center>
+          - Chủ Hộ: {{ state_attr('sensor.evn_thong_tin','name')}} <br/>
+          - Mã Khách Hàng: {{ state_attr('sensor.evn_thong_tin','id')}}<br/>
+          - SĐT: {{ state_attr('sensor.evn_thong_tin','phone')}} <br/>
+          - Địa Chỉ: {{ state_attr('sensor.evn_thong_tin','address')}} <br/>
+          - Loại Điện: {{ state_attr('sensor.evn_thong_tin','loai_hop_dong')}} <br/>
+          - Ngày Đăng Ký: {{ state_attr('sensor.evn_thong_tin','ngay_ki')}} <hr/>
+          - Nơi Đăng Ký: {{state_attr('sensor.evn_thong_tin','electricity_company').name}} <br/>
+          - Địa Chỉ: {{state_attr('sensor.evn_thong_tin','electricity_company').address}} <br/>
+
