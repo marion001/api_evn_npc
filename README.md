@@ -61,3 +61,5 @@ Demo UI:
           - Địa Chỉ: {{state_attr('sensor.evn_thong_tin','electricity_company').address}} <br/>
 
 ![alt](https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/137065606_2551878698447309_4679071614484975340_n.jpg?_nc_cat=101&ccb=2&_nc_sid=dbeb18&_nc_ohc=heVhn0w3lOoAX9AV-iG&_nc_ht=scontent.fhan5-5.fna&oh=c829e5560495d8b63d904239663708c7&oe=602C022A)
+
+![alt](https://scontent.fhan5-4.fna.fbcdn.net/v/t1.0-9/138864451_2555047104797135_485514673109896812_n.jpg?_nc_cat=104&ccb=2&_nc_sid=dbeb18&_nc_ohc=XSCWpEDSf3wAX9-alie&_nc_ht=scontent.fhan5-4.fna&oh=ae508450ad9109f362214acb6682af8b&oe=602A4079)
